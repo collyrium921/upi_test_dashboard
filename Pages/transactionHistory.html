@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="trans_history">
+            <h2>Transaction History</h2>
+        </div>
+    </div>
+    <div id="template" style="display: none;">
+        <div class="txn_history">
+            <div class="line_one r">
+                <span class="description"></span>
+                <span class="amount"></span>
+            </div>
+            <div class="line_two r">
+                <span class="acc_no"></span>
+                <span class="date"></span>
+            </div>
+            <div class="line_three r">
+                <span class="action"></span>
+                <span class="time"></span>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

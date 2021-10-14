@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transaction History</title>
+    <link rel="stylesheet" type="text/css" href="../css/style1.css" />
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="body"></div>
+    <div class="wrapper">
+        <h2 class="heading">Transaction History</h2>
+        <div class="transaction_history"> </div>
+    </div>
+    <div id="template" style="display: none;">
+        <div class="txn_history">
+            <div class="line_one r">
+                <span class="description"></span>
+                <span class="amount"></span>
+            </div>
+            <div class="line_two r">
+                <span class="acc_no"></span>
+                <span class="date"></span>
+            </div>
+            <div class="line_three r">
+                <span class="action"></span>
+                <span class="time"></span>
+            </div>
+        </div>
+    </div>
+    <div id='error_screen'>
+        <div><img src='../images/error-image.png ' alt='error occured' /></div>
+        <h3>No details found.</h3>
+        <h3><a href="index.html">Please go back</a></h3>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="../js/index1.js"></script>
+</body>
+
+
+</html>

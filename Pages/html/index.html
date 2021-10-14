@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="../css/style1.css" />
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" />
+</head>
+
+<body>
+    <tag autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+    <table>
+        <tr>
+            <td><b>Select Customer Id:</b></td>
+            <td>
+                <input type="text" id="cust_id" placeholder="-Select-" maxlength="7" onpaste="preventPasteCharacters(event)" onkeypress="preventCharacters(event)" oninput="custIdValidate()" />
+                <span class="cust_iderror error"></span>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Select Action:</b></td>
+            <td>
+                <input type="text" id="action" placeholder="-Select-" maxlength="30" onpaste="preventPasteDigits(event)" onkeydown="preventDigits(event)" />
+                <span class="actionerror error"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="proceed_button" onclick="proceedToAction()">Proceed</button>
+            </td>
+            <td></td>
+        </tr>
+    </table>
+    <div id='error_screen'>
+        <div><img src='../images/error-image.png ' alt='error occured' /></div>
+        <h3>No details found.<br> Please go back</h3>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="../js/index1.js"></script>
+</body>
+
+</html>

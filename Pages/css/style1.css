@@ -1,0 +1,97 @@
+table {
+    margin: 10% auto;
+}
+
+tr {
+    width: 200px;
+    height: 40px;
+}
+
+input {
+    width: 200px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+button {
+    cursor: pointer;
+    width: 200px;
+    display: block;
+    height: 40px;
+    background-color: teal;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 45%;
+    margin-top: 10px;
+}
+
+h3 {
+    margin-left: 40%;
+}
+
+.txn_history,
+.pay_req {
+    border: 1px solid black;
+    margin: 10px 5px;
+    padding: 5px;
+}
+
+.r {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper {
+    width: 40%;
+    margin: 0 auto;
+}
+
+a {
+    cursor: pointer;
+    color: blue;
+}
+
+.pending {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.pending_transaction {
+    display: flex;
+}
+
+.sent,
+.receive {
+    width: 50%;
+}
+
+#error_screen {
+    display: none;
+}
+
+#error_screen img {
+    margin-left: 30%;
+    margin-top: 5%;
+}
+
+.error {
+    font-size: 15px;
+    color: red;
+}
+
+#invalid_upi,
+#less_balance,
+#goback,
+#nopending {
+    display: none;
+}
+
+.verify_upi,
+.pending {
+    display: none;
+}
+
+.heading {
+    display: none;
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pending Transactions</title>
+    <link rel="stylesheet" type="text/css" href="../css/style1.css" />
+</head>
+
+<body>
+    <div class="body"></div>
+    <div class="pending">
+        <h3 class="heading">Pending Transactions</h3>
+        <div class="pending_transaction">
+            <div class="sent">
+                <h3 class="heading">SENT</h3>
+            </div>
+            <div class="receive">
+                <h3 class="heading">RECEIVE</h3>
+            </div>
+        </div>
+        <div>
+            <h3 id="nopending">No pending Transactions!</h3>
+            <h3 id="goback"><a href="index.html">Please Go Back</a></h3>
+        </div>
+    </div>
+    <div id="template" style="display: none;">
+        <div class="pay_req">
+            <div class="line_one r">
+                <span class="description">Description</span>
+                <span class="amount">Amount</span>
+            </div>
+            <div class="line_two r">
+                <span class="upi">Upi</span>
+                <span class="date">Date</span>
+            </div>
+            <div class="line_three r">
+                <a class="remind pay" onclick="performAction(this)">Remind</a>
+                <a class="cancel reject" onclick="performAction(this)">Cancel</a>
+                <span class="time"></span>
+            </div>
+        </div>
+    </div>
+    <div id='error_screen'>
+        <div><img src='../images/error-image.png ' alt='error occured' /></div>
+        <h3>No details found.</h3>
+        <h3><a href="index.html">Please go back</a></h3>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="../js/index1.js"></script>
+</body>
+
+</html>

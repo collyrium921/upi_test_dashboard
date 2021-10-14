@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <style>
+        body {
+            display: flex;
+        }
+
+        .left {
+            width: 65%;
+        }
+
+        .right {
+            width: 35%;
+        }
+
+        select,
+        input {
+            height: 30px;
+            width: 250px;
+        }
+
+        .selection_category {
+            margin-top: 50px;
+        }
+
+        .input {
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .pending_transaction {
+            display: flex;
+            margin-top: 30px;
+        }
+
+        .sent,
+        .receive {
+            width: 50%;
+        }
+
+        .txn_history,.pay_req {
+            border: 1px solid black;
+            margin: 10px 5px;
+        }
+
+        .r {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="left">
+        <div class="customer">
+            <p><b>Select customer id</b></p>
+            <label for="cust_id">Customer_id:</label>
+            <select id="customer">
+                <option value="">-Select-</option>
+                <option>1</option>
+                <option>2</option>
+                <option>1234567</option>
+            </select>
+        </div>
+        <div class="selection_category">
+            <div class="sender input">
+                <label for="sender">Select Sender:</label>
+                <select id="sender"></select>
+            </div>
+            <div class="receiver input">
+                <label for="receiver">Select Receiver:</label>
+                <select id="receiver"></select>
+            </div>
+            <div class="amount input">
+                <label for="amount">Enter Amount:</label>
+                <input id="amount" onkeypress="amount_validate(event)" class="Stylednumber">
+            </div>
+            <div class="button" style="margin-top: 30px;">
+                <button id="button_one" onclick="pay(1)">Pay</button>
+                <button id="button_two" onclick="pay(2)">Send Request</button>
+                <button id="check_bal" onclick="check_bal()">Check Balance</button>
+                <span id="balance"></span>
+                <!-- <button id="get_pending_txn">Get Pending Transations</button> -->
+            </div>
+        </div>
+        <h3>Collect Request</h3>
+        <div class="pending_transaction">
+            <div class="sent">
+                <h3>SENT</h3>
+            </div>
+            <div class="receive">
+                <h3>RECEIVE</h3>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="transaction_history">
+            <h2>Transaction History</h2>
+        </div>
+    </div>
+    <div id="template" style="display: none;">
+        <div class="txn_history">
+            <div class="line_one r">
+                <span class="desc"></span>
+                <span class="amt_paid amt_received amt_pending"></span>
+            </div>
+            <div class="line_two r">
+                <span class="acc_no"></span>
+                <span class="date"></span>
+            </div>
+            <div class="line_three r">
+                <span class="direction"></span>
+                <span class="action_success action_failed action_pending"></span>
+            </div>
+        </div>
+        <div class="pay_req">
+            <div class="line_one r">
+                <span class="desc"></span>
+                <span class="amt_paid"></span>
+            </div>
+            <div class="line_two r">
+                <span class="upi"></span>
+                <span class="date"></span>
+            </div>
+            <div class="line_three r">
+                <a href="#" class="remind pay" onclick="fun(this)"></a>
+                <a href="#" class="cancel reject" onclick="fun(this)"></a>
+                <span class="action"></span>
+            </div>
+        </div>
+    </div>
+   
+    <script src="test.js"></script>
+</body>
+
+</html>

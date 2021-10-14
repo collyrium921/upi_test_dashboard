@@ -1,0 +1,76 @@
+select,
+input {
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+    width: 200px;
+    display: block;
+    height: 40px;
+    background-color: teal;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 90px;
+}
+
+a {
+    cursor: pointer;
+    color: blue;
+}
+
+#balance {
+    margin-left: 150px;
+}
+
+.wrapper {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.pend {
+    background-color: white;
+    color: blue;
+    margin: 0px;
+    width: 70px;
+    height: 30px;
+}
+
+.r {
+    display: flex;
+    justify-content: space-between;
+}
+
+.txn_history,
+.pay_req {
+    border: 1px solid black;
+    margin: 10px 5px;
+}
+
+.pending {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.pending_transaction {
+    display: flex;
+}
+
+.sent,
+.receive {
+    width: 50%;
+}
+
+.input {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.selection_category {
+    margin-top: 50px;
+}

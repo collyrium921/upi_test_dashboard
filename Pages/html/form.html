@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="../css/style1.css" />
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" />
+</head>
+
+<body>
+    <tag autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+    <table class="form_table">
+        <tr>
+            <td>Select Sender:</td>
+            <td>
+                <input type="text" placeholder="-Select-" id="sender" maxlength="64" class="upi" />
+                <span class="sendererror error"></span>
+            </td>
+        </tr>
+        <tr class="receiver_upi">
+            <td>Select Receiver:</td>
+            <td>
+                <input type="text" placeholder="-Select-" id="receiver" maxlength="64" class="upi" />
+                <span class="receivererror error"></span>
+            </td>
+        </tr>
+        <tr class="verify_upi">
+            <td>Enter UPI address:</td>
+            <td>
+                <input type="text" id="verify_upi" maxlength="64" class="upi" />
+                <span class="verify_upierror error"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Enter Amount:</td>
+            <td>
+                <input type="text" id="amount" class="stylednumber" onkeypress="validateAmount(event)" onpaste="validatePasteAmount(event)" maxlength="9" oninput="showVal()" />
+                <span class="amounterror error"></span>
+            </td>
+        </tr>
+        <tr>
+            <td><button id="button" onclick="payRequestAction()"></button></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><button id="verify" onclick="hideReceiverUpi()">Verify UPI Address</button></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><button id="check_bal" onclick="checkBalance()">Check Balance</button></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><span id="text_bal" style="display: none;">Balance:</span><span id="balance"></span></td>
+        </tr>
+    </table>
+    <div>
+        <h3 id="invalid_upi">Invalid UPI Address!</h3>
+        <h3 id="less_balance">Insufficient Balance!</h3>
+        <h3 id="goback"><a href="index.html">Please Go Back</a></h3>
+    </div>
+    <div id='error_screen'>
+        <div><img src='../images/error-image.png ' alt='error occured' /></div>
+        <h3>No details found.</h3>
+        <h3><a href="index.html">Please go back</a></h3>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="../js/index1.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h3>Fill details</h3>
+        <div class=" selection_category">
+            <div class="sender input ">
+                <label for="sender">Select Sender:</label>
+                <select id="sender"></select>
+            </div>
+            <div class="receiver input">
+                <label for="receiver">Select Receiver:</label>
+                <select id="receiver"></select>
+            </div>
+            <div class="verify input">
+                <label for="verify_address">Enter UPI Address:</label>
+                <input id="verify_upi">
+            </div>
+            <div class="amount input">
+                <label for="amount">Enter Amount:</label>
+                <input id="amount" onkeypress="amount_validate(event)" class="Stylednumber">
+            </div>
+            <div class="button" style="margin-top: 30px; ">
+                <button id="button"></button>
+                <button id="verify">Verify UPI Address</button>
+                <button id="check_bal">Check Balance</button>
+                <span id="balance"></span>
+            </div>
+        </div>
+    </div>
+    <script src="index.js "></script>
+</body>
+
+</html>
